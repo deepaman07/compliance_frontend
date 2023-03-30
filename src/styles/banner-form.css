@@ -1,0 +1,73 @@
+.wrapper .banner-bg {
+  height: 538px;
+  background: #fff;
+  background-image: url(../images/form-bg.svg),
+    linear-gradient(180deg, #fff 0, #fff 50%, #eaf2fe 100%);
+  /* background-image: url(./images/form-bg.svg), linear-gradient(180deg, #fff 0, #fff 50%, #eaf2fe 100%); */
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.wrapper .banner-bg .auth-form {
+  border-radius: 10px;
+  background: #fff;
+  padding: 45px;
+  height: 460px;
+  box-shadow: 0px 0px 15px #aaaaaa29;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  float: right;
+  flex-flow: wrap;
+}
+
+.wrapper .banner-bg .auth-form h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: -50px;
+  margin-top: 0px;
+}
+
+.wrapper .banner-bg .auth-form h1 small {
+  font-size: 17px;
+  color: #999;
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.wrapper .banner-bg .auth-form form {
+  width: 100%;
+}
+
+.wrapper .banner-bg .auth-form form .pb-form-floating label {
+  font-size: 13px;
+}
+
+.wrapper .banner-bg .financeBg {
+  background: url(../images/login-img.png) no-repeat left center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .wrapper .banner-bg {
+    height: auto;
+    padding: 5px 0 15px 0;
+  }
+
+  .wrapper .banner-bg .financeBg {
+    display: none;
+  }
+
+  .wrapper .banner-bg .auth-form {
+    padding: 40px 25px;
+    height: auto;
+  }
+
+  .wrapper .banner-bg .auth-form h1 {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+}

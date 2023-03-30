@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import "./styles/header.css";
+@import "./styles/banner-form.css";
+@import "./styles/otpmodal.css";
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background: #fff;
+  color: #707070;
+  font-size: 13px;
+  padding-top: 80px;
+  height: 100%;
+}
+
+:focus,
+:focus-visible {
+  /* ... */
+  outline: none;
+  box-shadow: none;
+}
+
+.alert {
+  padding: 10px;
+}
+
+.form-control {
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.dropdown-menu li a {
+  font-size: 13px;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: 1366px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+:-ms-input-placeholder {
+  font-size: 14px;
+}
+
+::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+::placeholder {
+  font-size: 14px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+option {
+  font-size: 14px;
+}
+
+.pb-form-floating {
+  position: relative;
+}
+
+.pb-form-floating .form-control {
+  height: 58px;
+  border-radius: 8px;
+}
+
+.pb-form-floating .form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.pb-form-floating label {
+  position: absolute;
+  top: -13px;
+  left: 10px;
+  padding: 3px;
+  background: #fff;
+  font-size: 14px;
+  color: #397ef6;
+}
+
+.btn-lg {
+  height: 58px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.wrapper .product-with-bg {
+  background: transparent linear-gradient(300deg, #5e9ffa2d 0%, #ffffff 100%) 0% 0% no-repeat padding-box;
+}
+
+.wrapper .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 90px;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.wrapper .header .btn-outline-primary {
+  height: 42px;
+  font-size: 13px;
+  font-weight: 500;
+  width: 100px;
+}
+
+.wrapper .card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #b6b7b9;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.wrapper h2.heading {
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: bold;
+  color: #0e2942;
+  margin-bottom: 25px;
+}
+
+.wrapper .our-product {
+  padding-top: 15px;
+  padding-bottom: 35px;
+}
+
+.wrapper .our-product .card {
+  max-width: 215px;
+  padding: 20px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.wrapper .our-product .card img {
+  width: 40px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.wrapper .our-product .card h5 {
+  font-size: 14px;
+  line-height: 19px;
+  color: #07294a;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.wrapper .our-product .auth-form .otp-number ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+
+.wrapper .our-product .auth-form .otp-number ul li {
+  width: 16.66%;
+  text-align: center;
+  margin: 0px 5px;
+}
+
+.wrapper .our-product .auth-form .otp-number ul li:first-child {
+  margin-left: 0;
+}
+
+.wrapper .our-product .auth-form .otp-number ul li:last-child {
+  margin-right: 0;
+}
+
+.wrapper .our-product .auth-form .otp-number ul li .form-control {
+  text-align: center;
+  height: 56px;
+}
+
+.wrapper .our-product .auth-form .otp-expire-msg {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.wrapper .our-product .auth-form .otp-expire-msg p {
+  font-size: 16px;
+  color: #344055;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.wrapper .what-we-offer {
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.wrapper .what-we-offer .offer-cards {}
+
+.wrapper .what-we-offer .offer-cards .offer-card {
+  width: 525px;
+  height: 112px;
+  background: #f0f0f0 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wrapper .what-we-offer .offer-cards .offer-card img {
+  width: 45px;
+  padding-right: 20px;
+}
+
+.wrapper .what-we-offer .offer-cards .offer-card h3 {
+  font-size: 14px;
+  line-height: 19px;
+  color: #07294a;
+  font-weight: 500;
+}
+
+.wrapper .what-we-offer .offer-cards .offer-card p {
+  font-size: 14px;
+  line-height: 19px;
+  color: #5d5d5d;
+  margin-bottom: 0;
+}
+
+.wrapper .footer {
+  background: #002153 0% 0% no-repeat padding-box;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.wrapper .footer p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.wrapper .footer p.small {
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+
+  .wrapper #kycForm .modal-lg,
+  .wrapper #kycForm .modal-xl {
+    max-width: 1010px;
+  }
+}
+
+.wrapper #kycForm {
+  border-radius: 16px;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.wrapper #kycForm {
+  padding: 0;
+}
+
+.wrapper #kycForm .pb-form-floating>.form-select {
+  height: 58px;
+  border-radius: 8px;
+}
+
+.wrapper #kycForm .pb-form-floating label {
+  color: #767676;
+}
+
+.wrapper #kycForm .modal-footer {
+  padding: 0.75rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.wrapper #kycForm .modal-footer .btn {
+  font-size: 14px;
+  width: 90px;
+  height: 48px;
+}
+
+.wrapper #kycForm div#v-pills-tab {
+  width: 260px;
+  padding-top: 87px;
+}
+
+.wrapper #kycForm div#v-pills-tab .nav-link {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #07294a;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.wrapper #kycForm div#v-pills-tab .nav-link.active {
+  background: #e0edff 0% 0% no-repeat padding-box;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.wrapper #kycForm div#v-pills-tab .nav-link span {
+  color: red;
+}
+
+.wrapper #kycForm div#v-pills-tabContent {
+  border-left: 1px solid #172b4d30;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.wrapper #kycForm .custom-radio-btn h5 {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  -webkit-columns: #07294a;
+  columns: #07294a;
+}
+
+.wrapper #kycForm .custom-radio-btn .form-check.form-check-inline {
+  position: relative;
+  padding-left: 0;
+}
+
+.wrapper #kycForm .custom-radio-btn .form-check.form-check-inline label {
+  padding: 13px 45px;
+  border-radius: 8px;
+  border: 1px solid #767676;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.wrapper #kycForm .custom-radio-btn .form-check.form-check-inline .form-check-input {
+  position: absolute;
+  left: 40px;
+  top: 12px;
+}
+
+.wrapper #kycForm .custom-radio-btn .form-check.form-check-inline.checked label {
+  color: #0065ff;
+  border: 1px solid #0065ff;
+}
+
+.wrapper #kycForm .custom-choose-file label {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #138eff;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #138eff;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.wrapper #kycForm .custom-choose-file label img {
+  padding-right: 5px;
+}
+
+.wrapper #kycForm .custom-choose-file #file-chosen {
+  background: #d1fff0 0% 0% no-repeat padding-box;
+  border-radius: 0px 5px 5px 0px;
+  border-left: 3px solid #19d194;
+  padding: 11px 15px 9px 15px;
+  margin-left: 15px;
+  font-size: 12px;
+  letter-spacing: 0.24px;
+  color: #6a6a6b;
+}
+
+.wrapper #kycForm .custom-choose-file #file-chosen img:first-child {
+  padding-right: 5px;
+}
+
+.wrapper #kycForm .custom-choose-file #file-chosen img:last-child {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .wrapper .container-fluid {
+    padding: 0 15px;
+  }
+
+  .wrapper .our-product .auth-form {
+    width: auto;
+    float: unset;
+  }
+
+  .wrapper .our-product .col-md-4 {
+    width: 50%;
+  }
+
+  .wrapper .our-product .card {
+    max-width: 100%;
+  }
+
+  .wrapper .our-product .row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .wrapper .our-product h2.heading-product {
+    margin-top: 30px;
+  }
+
+  .wrapper .what-we-offer .offer-cards .offer-card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .wrapper #kycForm {
+    max-width: 100%;
+  }
+
+  .wrapper #kycForm .d-flex {
+    display: unset !important;
+  }
+
+  .wrapper #kycForm div#v-pills-tab {
+    width: 100%;
+    padding-top: 35px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .wrapper #kycForm div#v-pills-tab .nav-link {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+
+  .wrapper #kycForm div#v-pills-tab .nav-link.active {
+    background: 0% 0% no-repeat padding-box padding-box #e0edff;
+  }
+
+  .wrapper #kycForm div#v-pills-tabContent {
+    padding-right: unset;
+  }
+
+  .wrapper #kycForm .flex-column {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper .our-product .row-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper .header-left .navbar-brand img {
+    width: 150px;
+  }
+
+  .wrapper .our-product .auth-form {
+    padding: 40px 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*Aman's CSS*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.resend-otp {
+  margin-left: 5px;
+  border-left: 1px solid #777;
+  padding-left: 5px;
+}
+
+#BasicInfo .tab-content>.tab-pane {
+  display: block;
+}
+
+#BasicInfo .tab-content>.tab-pane {
+  opacity: 1;
+}
+
+#BankInfo .tab-content>.tab-pane {
+  display: block;
+}
+
+#BankInfo .tab-content>.tab-pane {
+  opacity: 1;
+}
+
+#kycForm .tab-content>.tab-pane {
+  display: block;
+}
+
+#kycForm .tab-content>.tab-pane {
+  opacity: 1;
+}
+
+.invalid {
+  color: red;
+  text-align: left;
+  font-size: 11px;
+  clear: both;
+  float: left;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.my-input {
+  height: 42px;
+  border-radius: 0 5px 5px 0;
+  background: #d1fff0;
+  font-size: 12px;
+  color: #6a6a6b;
+  border: 0;
+  padding: 11px;
+  border-left: 3px solid #19d194;
+}
+
+.Rejected {
+  background-color: red;
+}
+
+.wrapper .what-we-offer .offer-cards .box h1,
+.wrapper .what-we-offer .offer-cards .box h2,
+.wrapper .what-we-offer .offer-cards .box h3,
+.wrapper .what-we-offer .offer-cards .box h4,
+.wrapper .what-we-offer .offer-cards .box h5,
+.wrapper .what-we-offer .offer-cards .box h6 {
+  color: #3e4555;
+}
+
+.wrapper .what-we-offer .offer-cards .box .font-weight-medium {
+  font-weight: 500;
+}
+
+.wrapper .what-we-offer .offer-cards .box .bg-light {
+  background-color: #f4f8fa !important;
+}
+
+.wrapper .what-we-offer .offer-cards .box .card.card-shadow {
+  box-shadow: 0px 0px 30px rgb(115 128 157 / 10%);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.wrapper .what-we-offer .offer-cards .box .card.card-shadow .imagebox {
+  width: 80px;
+}
+
+.wrapper .what-we-offer .offer-cards .box .card.card-shadow .imagebox>img {
+  width: 80px;
+  max-width: inherit;
+}
+
+.wrapper .what-we-offer .offer-cards .box .card.card-shadow .description {
+  padding-left: 15px;
+}
+
+.wrapper .what-we-offer .offer-cards .box .card.card-shadow img.img-fluid {
+  height: 80px;
+  width: 80px;
+}
+
+.wrapper .what-we-offer .offer-cards .box .btn-md {
+  padding: 15px 45px;
+  font-size: 16px;
+}
+
+.MuiInputLabel-root {
+  font-size: 13px !important;
+  padding-bottom: 20px !important;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  font-size: "13px" !important;
+  padding: "13px" !important;
+}
