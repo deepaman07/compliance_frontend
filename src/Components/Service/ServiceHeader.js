@@ -11,6 +11,7 @@ function ServiceHeader(props) {
 
   const handleLogout = (e) => {
     logoutUser();
+    
   };
 
   function handleClick(e) {

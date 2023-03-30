@@ -160,6 +160,7 @@ const UserState = (props) => {
       setUser([]);
       localStorage.clear();
       Cookies.remove("userCookie");
+      window.location.reload(false);
     } catch (err) {
       alert(err);
       console.error(err.message);
