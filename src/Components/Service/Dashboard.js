@@ -19,26 +19,18 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
+var records = [];
 const Dashboard = () => {
   const context = useContext(userContext);
   const { user } = context;
   const [Details, setDetails] = useState([]);
   const [x_axis, setX_axis] = useState([]);
-  const currentDate = new Date();
-  var currentYear = currentDate.getFullYear();
-  const currentMonth = currentDate.getMonth() + 1;
-  if (currentMonth <= 3) currentYear = currentYear - 1;
   useEffect(() => {
     if (Details.length === 0) {
       calculateDetails();
     }
-    var records = [];
     Object.keys(Details).forEach((row) => {
-      if (Details[row].Month >= 4) records.push(Details[row].TotalRecords);
-    });
-    Object.keys(Details).forEach((row) => {
-      if (Details[row].Month < 4) records.push(Details[row].TotalRecords);
+      records.push(Details[row].TotalRecords);
     });
     setChartData({
       labels: x_axis,
@@ -54,7 +46,6 @@ const Dashboard = () => {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Details, chartData, x_axis]);
-  var records = Array.from({ length: 12 }, () => 0); // Initialize array with 12 elements and set all values to zero
   const Token = JSON.parse(user).token.Token;
   const calculateDetails = async () => {
     const requestOptions = {
@@ -140,16 +131,12 @@ const Dashboard = () => {
     var x_labels = [];
     var month_labels = {};
     Object.entries(result).forEach((row) => {
-      if (row[1].Month !== 1 && row[1].Month !== 2 && row[1].Month !== 3) {
-        month_labels[MonthDict[row[1].Month.split("-")[0]]] = row[1].Month;
-        row[1].Month = MonthDict[row[1].Month.split("-")[0]];
-      }
+      month_labels[MonthDict[row[1].Month.split("-")[0]]] = row[1].Month;
+      row[1].Month = MonthDict[row[1].Month.split("-")[0]];
     });
-    console.log(result);
     Object.entries(result).forEach((row) => {
       x_labels.push(month_labels[row[1].Month]);
     });
-    console.log(x_labels);
     setX_axis(x_labels);
     setDetails(result);
   };
